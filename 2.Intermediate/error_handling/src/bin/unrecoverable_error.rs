@@ -24,6 +24,13 @@ fn main() {
         println!("Value is {}", val);
     }
 
+    // or_else method will return the original Option if it is Some(T).
+    // If the original Option is None, it will call the provided closure f and return its result.
+    println!("Index 1: {}", count.get(1).or_else(|| Some(&10)).unwrap());
+    println!("Default value : {}", count.get(5).or_else(|| Some(&10)).unwrap());
+
+    // default value -  diff between or and or_else
+    println!("{:?}", count.get(6).or(Some(&7)));
 
 
 
