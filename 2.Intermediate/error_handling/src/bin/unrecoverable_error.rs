@@ -12,8 +12,18 @@ fn main() {
     let count = vec![1, 2, 3];
     println!("{}",count[2]);
 
-    // panic
-    println!("{}",count[5]);
+    // will panic above statement
+    // println!("{}",count[5]);
+
+    match count.get(5) {
+        Some(val) => println!("Value is {}", val),
+        None => println!("Index not found")
+    }
+
+    if let Some(val) = count.get(2) {
+        println!("Value is {}", val);
+    }
+
 
 
 
