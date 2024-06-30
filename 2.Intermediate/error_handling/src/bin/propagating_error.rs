@@ -5,7 +5,7 @@ use std::io::{ErrorKind, Read};
 fn main() {
     let content = read_file("example.txt");
     match content {
-        Ok(content) => println!("File Read successfully"),
+        Ok(content) => println!("File Read successfully. Content is {}", content),
         Err(err) => {
             match err.kind() {
                 ErrorKind::NotFound  => println!("File not found"),
