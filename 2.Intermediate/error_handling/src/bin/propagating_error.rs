@@ -23,6 +23,7 @@ fn main() {
 
     println!("##############");
 
+    // Struct Update Syntax
     user = User{
         firstname: "".to_string(),
         ..user
