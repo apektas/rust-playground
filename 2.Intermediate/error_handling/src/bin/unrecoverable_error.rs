@@ -32,6 +32,8 @@ fn main() {
     // default value -  diff between or and or_else
     println!("{:?}", count.get(6).or(Some(&7)));
 
+    println!("{:?}", count.get(6).ok_or(1));
+    println!("{:?}", count.get(6).ok_or("Error occurred"));
 
 
 }
